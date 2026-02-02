@@ -7,7 +7,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 const AdminDashboard = () => {
     const [leads, setLeads] = useState([]);
     const [resources, setResources] = useState([]);
-    const [resourceForm, setResourceForm] = useState({ title: '', category: 'O-Level Math', link: '' });
+    const [resourceForm, setResourceForm] = useState({ title: '', category: 'O-Level Math', link: '', description: '' });
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
         const token = localStorage.getItem('token');
         try {
             await axios.post(`${API_URL}/api/resources`, resourceForm, { headers: { 'x-auth-token': token } });
-            setResourceForm({ title: '', category: 'O-Level Math', link: '' });
+            setResourceForm({ title: '', category: 'O-Level Math', link: '', description: '' });
             fetchData();
         } catch (err) {
             console.error(err);
@@ -109,6 +109,12 @@ const AdminDashboard = () => {
                                     required
                                 />
                             </div>
+                            <textarea
+                                className="w-full bg-gray-800 p-3 rounded text-white border border-gray-700 focus:border-primary outline-none transition-colors h-20"
+                                placeholder="Description (Optional)"
+                                value={resourceForm.description}
+                                onChange={e => setResourceForm({ ...resourceForm, description: e.target.value })}
+                            />
                             <button className="w-full bg-secondary text-white font-bold py-3 rounded hover:bg-purple-600 transition-colors">
                                 Upload Resource
                             </button>
