@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useVibe } from '../context/VibeContext';
+import profilePic from '../assets/profile.jpg';
 
 const Hero = () => {
     const { t } = useVibe();
@@ -83,21 +84,17 @@ const Hero = () => {
                 <div className="relative w-80 h-80 md:w-96 md:h-96">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl opacity-20 animate-pulse"></div>
                     <motion.div
-                        className="w-full h-full bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700 flex items-center justify-center relative overflow-hidden group shadow-2xl"
+                        className="w-full h-full rounded-2xl border border-gray-700 relative overflow-hidden group shadow-2xl"
                         whileHover={{ rotateY: 5, rotateX: -5, scale: 1.02 }}
                         style={{ perspective: 1000 }}
                     >
-                        <div className="text-center p-6">
-                            <div className="w-32 h-32 bg-gray-700 rounded-full mx-auto mb-4 animate-pulse"></div>
-                            <span className="text-gray-500 font-body text-lg block">
-                                [Tutor Image]
-                            </span>
-                            <span className="text-xs text-gray-600 font-mono mt-2 block">
-                                Use Generate Image Tool
-                            </span>
-                        </div>
+                        <img
+                            src={profilePic}
+                            alt="Syed Muhammad Raza Hussain"
+                            className="w-full h-full object-cover"
+                        />
                         {/* Decorative Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-50 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-40 pointer-events-none"></div>
                     </motion.div>
                 </div>
             </motion.div>
