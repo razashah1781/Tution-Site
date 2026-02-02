@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #06b6d4;
+  --color-secondary: #8b5cf6;
+  --color-dark: #0f172a;
+
+  --font-heading: "Clash Display", "Space Grotesk", sans-serif;
+  --font-body: "JetBrains Mono", "Inter", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-body;
+  }
+}
