@@ -17,14 +17,14 @@ const Services = () => {
         {
             title: "O-Level CS",
             features: [t("Pseudocode Mastery", "Pseudocode God Mode"), "Python Basics", "Theory Crash Course", "Weekend Classes"],
-            priceMonth: "20k PKR",
+            priceMonth: "15k PKR",
             priceSession: "3k PKR",
             popular: true
         },
         {
             title: "A-Level CS",
             features: ["Advanced Coding", "P3 & P4", "Project Help", "Weekend Classes"],
-            priceMonth: "35k PKR",
+            priceMonth: "20k PKR",
             priceSession: "5k PKR"
         }
     ];
