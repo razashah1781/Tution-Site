@@ -35,6 +35,12 @@ const Resources = () => {
         <div className="min-h-screen pt-24 px-6 max-w-7xl mx-auto pb-20">
             <Helmet>
                 <title>{t("Resources | Raza's Hub", "Loot Drop | Raza's Base")}</title>
+                <meta name="description" content="Access free O/A Level Computer Science and Math resources, past papers, notes, and cheat sheets." />
+                <link rel="canonical" href="https://razashub.com/resources" />
+
+                <meta property="og:title" content={t("Resources | Raza's Hub", "Loot Drop | Raza's Base")} />
+                <meta property="og:description" content="Access free O/A Level Computer Science and Math resources, past papers, notes, and cheat sheets." />
+                <meta property="og:url" content="https://razashub.com/resources" />
             </Helmet>
 
             <div className="text-center mb-16">

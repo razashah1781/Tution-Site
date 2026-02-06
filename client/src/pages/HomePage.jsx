@@ -14,6 +14,11 @@ const HomePage = () => {
             <Helmet>
                 <title>{t("Raza's CS & Math Hub | O-Level Tutor", "Raza's Brainrot Hub | Academic Weaponry")}</title>
                 <meta name="description" content="Top-tier O/A Level Computer Science and Mathematics tuition. Get A*s/A grades with FAST NUCES expertise." />
+                <link rel="canonical" href="https://razashub.com/" />
+
+                <meta property="og:title" content={t("Raza's CS & Math Hub | O-Level Tutor", "Raza's Brainrot Hub | Academic Weaponry")} />
+                <meta property="og:description" content="Top-tier O/A Level Computer Science and Mathematics tuition. Get A*s/A grades with FAST NUCES expertise." />
+                <meta property="og:url" content="https://razashub.com/" />
             </Helmet>
             <VibeSelector />
             <Hero />
