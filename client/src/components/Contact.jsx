@@ -2,6 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { Instagram } from 'lucide-react';
 import { useVibe } from '../context/VibeContext';
 
 const ContactSchema = Yup.object().shape({
@@ -93,16 +94,31 @@ const Contact = () => {
                 </form>
 
                 {/* Calendly Link Button */}
-                <div className="mt-8 text-center">
-                    <p className="text-gray-400 mb-4">{t("Or book directly:", "Or just pull up:")}</p>
-                    <a
-                        href="https://calendly.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-block px-8 py-3 border border-secondary text-secondary font-bold rounded hover:bg-secondary/10 transition-all hover:text-white"
-                    >
-                        {t("Schedule a Call", "Book the Sesh")}
-                    </a>
+                <div className="mt-8 text-center flex flex-col gap-4 justify-center items-center">
+                    <div>
+                        <p className="text-gray-400 mb-4">{t("Or book directly:", "Or just pull up:")}</p>
+                        <a
+                            href="https://calendly.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-block px-8 py-3 border border-secondary text-secondary font-bold rounded hover:bg-secondary/10 transition-all hover:text-white"
+                        >
+                            {t("Schedule a Call", "Book the Sesh")}
+                        </a>
+                    </div>
+
+                    <div>
+                        <p className="text-gray-400 mb-4">{t("Connect on Insta:", "Stalk the Gram:")}</p>
+                        <a
+                            href="https://instagram.com/razashub"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 px-8 py-3 border border-pink-500 text-pink-500 font-bold rounded hover:bg-pink-500/10 transition-all hover:text-white"
+                        >
+                            <Instagram className="w-5 h-5" />
+                            <span>@razashub</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
